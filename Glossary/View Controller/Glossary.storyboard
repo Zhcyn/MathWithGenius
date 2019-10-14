@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="viE-jm-HqW">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Glossary View Controller-->
+        <scene sceneID="l9d-Oj-AJR">
+            <objects>
+                <viewController id="viE-jm-HqW" customClass="GlossaryViewController" customModule="Maths_Genius" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yx-FM-MEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-z4-HOQ">
+                                <rect key="frame" x="5" y="5" width="365" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="WVD-uD-jzk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Qx-ZQ-Al3" customClass="CascadingTable" customModule="Maths_Genius" customModuleProvider="target">
+                                <rect key="frame" x="5" y="60" width="365" height="602"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryCell" id="btS-hR-8Lz">
+                                        <rect key="frame" x="0.0" y="28" width="365" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="btS-hR-8Lz" id="VRf-l7-jgg">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KIm-EX-l6z" firstAttribute="trailing" secondItem="9Hq-z4-HOQ" secondAttribute="trailing" constant="5" id="5Sc-9f-1I9"/>
+                            <constraint firstItem="5Qx-ZQ-Al3" firstAttribute="top" secondItem="9Hq-z4-HOQ" secondAttribute="bottom" constant="5" id="H6n-tk-pxu"/>
+                            <constraint firstItem="9Hq-z4-HOQ" firstAttribute="leading" secondItem="KIm-EX-l6z" secondAttribute="leading" constant="5" id="IBb-rO-kgW"/>
+                            <constraint firstItem="KIm-EX-l6z" firstAttribute="trailing" secondItem="5Qx-ZQ-Al3" secondAttribute="trailing" constant="5" id="LeH-xO-aog"/>
+                            <constraint firstItem="KIm-EX-l6z" firstAttribute="bottom" secondItem="5Qx-ZQ-Al3" secondAttribute="bottom" constant="5" id="Pmd-9H-jWm"/>
+                            <constraint firstItem="5Qx-ZQ-Al3" firstAttribute="leading" secondItem="KIm-EX-l6z" secondAttribute="leading" constant="5" id="Zu6-Fa-NvP"/>
+                            <constraint firstItem="9Hq-z4-HOQ" firstAttribute="top" secondItem="KIm-EX-l6z" secondAttribute="top" constant="5" id="llD-iK-Nya"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KIm-EX-l6z"/>
+                    </view>
+                    <connections>
+                        <outlet property="cascadingTable" destination="5Qx-ZQ-Al3" id="ae9-8d-KTg"/>
+                        <outlet property="titleLabel" destination="9Hq-z4-HOQ" id="3Ys-qX-5H9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6za-qv-NJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="81"/>
+        </scene>
+    </scenes>
+</document>

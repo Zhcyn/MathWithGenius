@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Av-mH-O6Y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Help Screen View Controller-->
+        <scene sceneID="8zg-Mw-m48">
+            <objects>
+                <viewController id="4Av-mH-O6Y" customClass="HelpScreenViewController" customModule="Maths_Genius" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZZ-a8-0Yp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WH-eQ-epU">
+                                <rect key="frame" x="5" y="25" width="365" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Ic9-jO-Upb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="889-L8-C93" customClass="CustomTable" customModule="Maths_Genius" customModuleProvider="target">
+                                <rect key="frame" x="5" y="80" width="365" height="582"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.59005688469999995" green="0.97211796049999999" blue="0.35384048870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HelpCell" id="174-V3-eQv">
+                                        <rect key="frame" x="0.0" y="28" width="365" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="174-V3-eQv" id="LnK-HI-Bji">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3WH-eQ-epU" firstAttribute="top" secondItem="pNU-VZ-Plt" secondAttribute="top" constant="5" id="3AQ-af-Yjo"/>
+                            <constraint firstItem="pNU-VZ-Plt" firstAttribute="trailing" secondItem="3WH-eQ-epU" secondAttribute="trailing" constant="5" id="BTm-O9-MRw"/>
+                            <constraint firstItem="889-L8-C93" firstAttribute="leading" secondItem="pNU-VZ-Plt" secondAttribute="leading" constant="5" id="JIV-Ac-QkM"/>
+                            <constraint firstItem="pNU-VZ-Plt" firstAttribute="bottom" secondItem="889-L8-C93" secondAttribute="bottom" constant="5" id="N3O-4P-aBa"/>
+                            <constraint firstItem="pNU-VZ-Plt" firstAttribute="trailing" secondItem="889-L8-C93" secondAttribute="trailing" constant="5" id="UAy-eX-agc"/>
+                            <constraint firstItem="3WH-eQ-epU" firstAttribute="leading" secondItem="pNU-VZ-Plt" secondAttribute="leading" constant="5" id="dTG-pa-7cV"/>
+                            <constraint firstItem="889-L8-C93" firstAttribute="top" secondItem="3WH-eQ-epU" secondAttribute="bottom" constant="5" id="k4D-mg-CjU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pNU-VZ-Plt"/>
+                    </view>
+                    <connections>
+                        <outlet property="customTable" destination="889-L8-C93" id="1mG-NP-EAk"/>
+                        <outlet property="titleLabel" destination="3WH-eQ-epU" id="8sN-hc-Sjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PjL-7h-Ag2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="146.17691154422789"/>
+        </scene>
+    </scenes>
+</document>
